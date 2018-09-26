@@ -1,5 +1,4 @@
 
-x = ['Hamid',67,5.6,90,10,4]
 
-for i in x:
+for i in ['hamid',2,3,4,5.6]:
     print(i)
