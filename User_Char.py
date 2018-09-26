@@ -1,3 +1,3 @@
-ch = input('Enter a character')
+ch = raw_input('Enter a character ')[0]
 
 print(ch)
