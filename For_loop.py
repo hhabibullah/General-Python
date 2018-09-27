@@ -1,8 +1,15 @@
 
-#for loop for doing practice
-for i in range(1,21):
-    if i%5 != 0:
-        print(i)
-    else:
-        pass
+av = 5
+x= int(raw_input('How many candie do you want'))
+
+i =0
+
+while i <= x:
+    if i>av:
+        print ('out of stock')
+        break
+    print('candy')
+    i += 1
+
+print ('Bye')
 
