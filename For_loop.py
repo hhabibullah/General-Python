@@ -1,7 +1,10 @@
 
-for i in range(1,101):
-    if i%3==0 or i%5==0 or i%10==0 or i%20==0:
-        continue
-    print (i)
+from __future__ import print_function
+print('***********************************')
+for i in range(4):
+    for j in range(4):
+        print('#',end ='')
+    print()
 
-print('Bye')
+
+print('***********************************')
