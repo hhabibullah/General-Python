@@ -1,11 +1,12 @@
 from __future__ import print_function
+from __future__ import unicode_literals
 
 from array import *
 
 
-vals =array('i',[1,2,3,4,5])
-vals.reverse()
-print(vals.buffer_info())
+vals = array('u',['a','f','e'])
+#vals.reverse()
+#print(vals.buffer_info())
 for i in range(len(vals)):
 
     print(vals[i],end =' ')
