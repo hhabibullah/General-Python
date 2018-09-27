@@ -3,19 +3,11 @@ from __future__ import unicode_literals
 
 from array import *
 
+arr = array('i',[])
+n = int(raw_input('Enter the length of the array'))
 
-vals = array('i',[1,2,3,4,5,6,78])
+for i in range(n):
+    x = int(raw_input('Enter the next value'))
+    arr.append(x)
 
-newArr = array(vals.typecode,(a*a for a in vals))
-#vals.reverse()
-#print(vals.buffer_info())
-i =0
-while i <len(newArr):
-    print(newArr[i])
-    i +=1
-
-print()
-print('***********************************')
-
-for e in newArr:
-    print(e , end = ' ')
+print(arr)
