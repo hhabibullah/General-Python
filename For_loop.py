@@ -1,15 +1,7 @@
 
-av = 5
-x= int(raw_input('How many candie do you want'))
+for i in range(1,101):
+    if i%3==0 or i%5==0 or i%10==0 or i%20==0:
+        continue
+    print (i)
 
-i =0
-
-while i <= x:
-    if i>av:
-        print ('out of stock')
-        break
-    print('candy')
-    i += 1
-
-print ('Bye')
-
+print('Bye')
