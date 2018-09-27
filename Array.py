@@ -9,25 +9,25 @@ print(arr)
 print('***********************************************************')
 print('another way of creating an array from Numpy Package')
 
-ar = linspace(0,15,20)
+arr = linspace(0,15,20)
 
-print(ar)
+print(arr)
 
 print('***********************************************************')
 print('another way of creating an array from Numpy Package')
-a = arange(1,15,2)
-print(a)
+arr = arange(1,15,2)
+print(arr)
 print('***********************************************************')
 print('another way of creating an array from Numpy Package')
 
-aa = logspace(1,40,5)
-print('%.2f'%aa[1])
+arr = logspace(1,40,5)
+print('%.2f'%arr[1])
 
 print('***********************************************************')
 print('Another way of creating an array from Numpy Package')
 
-ap = zeros(5,int)
-print(ap)
+arr = zeros(5,int)
+print(arr)
 
 print('*********************************************************')
 print('Creating another type of array using Numpy package')
