@@ -19,12 +19,14 @@ person(age = 20 ,name ='Hamid') #keyword argument
 
 person('Hamid') #default argument
 
-def sum(a,*b): # Variable length argument
-    c =a
-    for i in b:
-        c = c+i
-    print('the sum of tuple is ',c)
+def sum(name,**b): # Keyword Variable length argument
+    #print(name)
+    for i,j in b.items():
+        print(i,j)
 
-sum(1,2,3,4)
+
+
+sum(name ='Hamid',city='Kabul',age = 20,mob =1234)
+
 
 
