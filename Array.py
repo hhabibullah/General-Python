@@ -17,3 +17,7 @@ for e in arr:
     if e == val:
         print(k)
     k +=1
+# search the value by using fuction
+print('***************************************************')
+print('Search the value by using the function')
+print(arr.index(val))
