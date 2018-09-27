@@ -11,3 +11,9 @@ for i in range(n):
     arr.append(x)
 
 print(arr)
+k =0
+val = int(raw_input('Enter the value you are looking for'))
+for e in arr:
+    if e == val:
+        print(k)
+    k +=1
