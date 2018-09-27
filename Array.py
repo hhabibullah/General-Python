@@ -1,18 +1,19 @@
 from __future__ import print_function
 from __future__ import unicode_literals
 
-a=10
-print('the outer variable address is ',id(a))
-def something():
-  #  global a
-    a=9
-    print('the local variable is ',a)
-    x = globals()['a']
-    print('the local variable address is ',id(x))
-    globals()['a'] = 15
 
-something()
-print('the outer variable looks like',a)
+def count(lst):
+  even =0
+  odd  =0
+  for i in lst:
+    if i%2==0:
+      even += 1
+    else:
+      odd += 1
+  return even,odd
 
+lst = [1,2,3,4,5,6,7,8]
+even,odd =count(lst)
+print('Even is {} and odd is {}'.format(even,odd))
 
 
