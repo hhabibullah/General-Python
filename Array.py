@@ -4,17 +4,15 @@ from functools import reduce
 
 
 class computer:
+    def __init__(self,cpu,ram):
+        self.cpu = cpu
+        self.ram = ram
 
     def config(self):
-        print('Hello world')
-        print('I am Hamid')
+        print('Hello what is the name of your cpu and how much ram',self.cpu,self.ram)
 
-com1 = computer()
-com2 = computer()
-
-computer.config(com1)# one way of calling to a method in a class
-computer.config(com2)
-print('Second way of calling to a method in a class is following')
+com1 = computer('E5',56) #Learning how to use constructor
+com2 = computer('r5',24)
 
 com1.config()  # second way of calling to a method in a class
 com2.config()
