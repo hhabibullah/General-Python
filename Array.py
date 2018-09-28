@@ -2,21 +2,19 @@ from __future__ import print_function
 from __future__ import unicode_literals
 from functools import reduce
 
-import Calc
-print(__name__)
 
-result = Calc.add(5,4)
-print(result)
-print('********************')
-result = Calc.sub(9,5)
-print(result)
-print('********************')
+class computer:
 
-result = Calc.mult(5,4)
-print(result)
-print('******************')
+    def config(self):
+        print('Hello world')
+        print('I am Hamid')
 
-result,re = Calc.div(20,4)
-print(result,re)
-print('******************')
+com1 = computer()
+com2 = computer()
 
+computer.config(com1)# one way of calling to a method in a class
+computer.config(com2)
+print('Second way of calling to a method in a class is following')
+
+com1.config()  # second way of calling to a method in a class
+com2.config()
