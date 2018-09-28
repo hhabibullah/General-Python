@@ -2,12 +2,14 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 
-def fact(x):
-    f =1
-    for i in range(1,x+1):
-        f *=i
-    return f
 
-x = 5
-result= fact(x)
+
+f = lambda a :a *a
+
+result = f(8)
+print(result)
+print('**************************************************************')
+f = lambda b,c : b+c
+
+result = f(4,3)
 print(result)
