@@ -3,25 +3,17 @@ from __future__ import unicode_literals
 from functools import reduce
 
 
-class computer:
+class Car:
+    wheel = 4
     def __init__(self):
-        self.name = 'Hamid'
-        self.age  =   29
-    def compare(self,c2):
-        if self.name == c2.name:
-            return True
-        else:
-            return False
+       self.mil = 10
+       self.model = 'BMW'
 
 
-c1 = computer()
-c2 = computer()
-c1.name = 'Rasheeee'
-c2.name = 'Afghanistan'
-print('comparing two objects ')
-if c1.compare(c2):
-    print('Equal')
-else:
-    print('Not equal')
-print(c1.name)
-print(c2.name)
+c1 = Car()
+c2 = Car()
+c1.mil =8
+Car.wheel = 3
+
+print(c1.mil,c1.model,c1.wheel)
+print(c2.mil,c2.model,c2.wheel)
