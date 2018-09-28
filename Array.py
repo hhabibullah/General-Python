@@ -4,15 +4,24 @@ from functools import reduce
 
 
 class computer:
-    def __init__(self,cpu,ram):
-        self.cpu = cpu
-        self.ram = ram
+    def __init__(self):
+        self.name = 'Hamid'
+        self.age  =   29
+    def compare(self,c2):
+        if self.name == c2.name:
+            return True
+        else:
+            return False
 
-    def config(self):
-        print('Hello what is the name of your cpu and how much ram',self.cpu,self.ram)
 
-com1 = computer('E5',56) #Learning how to use constructor
-com2 = computer('r5',24)
-
-com1.config()  # second way of calling to a method in a class
-com2.config()
+c1 = computer()
+c2 = computer()
+c1.name = 'Rasheeee'
+c2.name = 'Afghanistan'
+print('comparing two objects ')
+if c1.compare(c2):
+    print('Equal')
+else:
+    print('Not equal')
+print(c1.name)
+print(c2.name)
