@@ -1,21 +1,29 @@
 from __future__ import print_function
 from __future__ import unicode_literals
 from functools import reduce
+from threading import *
+from time import sleep
 
 
-a = 9
-b = 5
-try:
-    print(a/b)
-    k = int(input('Enter a number : '))
-except ZeroDivisionError as e:
-    print('Hey u can not divide a no by zero  :  the real error is  :',e)
-except ValueError:
-    print('Invalid number')
-except Exception as e:
-    print('something went wrong  :  ')
-finally:
-    print('It will be executed in both cases whether we have error or we dont have error')
+
+class Hello(Thread):
+    def run(self):
+        for i in range(5):
+            print('Helloooo')
+            sleep(1)
+
+class Hi(Thread):
+    def run(self):
+        for i in range(5):
+            print('Hi')
+            sleep(1)
+
+t1 = Hello()
+t2 = Hi()
+t1.start()
+sleep(0.1)
+t2.start()
+t1.join()
+t2.join()
 print('Bye')
-
 
