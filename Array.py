@@ -3,27 +3,19 @@ from __future__ import unicode_literals
 from functools import reduce
 
 
-class A:
-    def __init__(self):
-        print('Hello i am A')
-    def feature1(self):
-        print('this is feature1')
-
-class B:
-    def __init__(self):
-      #  super().__init__()
-        print('Hello i B')
-    def feature2(self):
-        print('this is feature2')
-class C(A,B):
-    def __init__(self):
-        super().__init__()
-        super().feature1()
-
-        print('Hello i am c')
-
-
-c1 = C()
-
+a = 9
+b = 5
+try:
+    print(a/b)
+    k = int(input('Enter a number : '))
+except ZeroDivisionError as e:
+    print('Hey u can not divide a no by zero  :  the real error is  :',e)
+except ValueError:
+    print('Invalid number')
+except Exception as e:
+    print('something went wrong  :  ')
+finally:
+    print('It will be executed in both cases whether we have error or we dont have error')
+print('Bye')
 
 
