@@ -3,25 +3,26 @@ from __future__ import unicode_literals
 from functools import reduce
 
 
-class student:
+class A:
 
-    def __init__(self,name,rollno):
-        self.name = name
-        self.rollno= rollno
-        self.lap   = self.laptop()
+    def feature1(self):
+        print('this is feature1')
 
-    def show(self):
-        print(self.name,self.rollno)
-        self.lap.show()
-    class laptop:
-        def __init__(self):
-            self.brand ='HP'
-            self.ram   = 90
-        def show(self):
-            print(self.brand,self.ram)
+class B:  
+    def feature2(self):
+        print('this is feature2')
+class C:
+    def feature3(self):
+        print('this is feature3')
+class D(A,B,C):#inheritance concept
+    def feature4(self):
+        print('this is feature4')
+c1 = A()
+c2 = B()
+c3 = C()
+C4 = D()
 
-s1 =student('hamid', 1)
-s2 =student('Hafeez',2)
+C4.feature1()
 
-print(s1.show())
-#lap1 = student.laptop()
+
+
