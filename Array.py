@@ -4,26 +4,12 @@ from functools import reduce
 from threading import *
 from time import sleep
 
+f = open('ABC','r')
+f1= open('wer','w')
+#f1.write('\nwhat about the other people and what about the other guys')
+#print(f1.readline(),end = '#')
+#print(f1.readline(),end = '#')
 
-
-class Hello(Thread):
-    def run(self):
-        for i in range(5):
-            print('Helloooo')
-            sleep(1)
-
-class Hi(Thread):
-    def run(self):
-        for i in range(5):
-            print('Hi')
-            sleep(1)
-
-t1 = Hello()
-t2 = Hi()
-t1.start()
-sleep(0.1)
-t2.start()
-t1.join()
-t2.join()
-print('Bye')
+for data in f:
+    f1.write(data)
 
