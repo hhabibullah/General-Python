@@ -4,25 +4,26 @@ from functools import reduce
 
 
 class A:
-
+    def __init__(self):
+        print('Hello i am A')
     def feature1(self):
         print('this is feature1')
 
-class B:  
+class B:
+    def __init__(self):
+      #  super().__init__()
+        print('Hello i B')
     def feature2(self):
         print('this is feature2')
-class C:
-    def feature3(self):
-        print('this is feature3')
-class D(A,B,C):#inheritance concept
-    def feature4(self):
-        print('this is feature4')
-c1 = A()
-c2 = B()
-c3 = C()
-C4 = D()
+class C(A,B):
+    def __init__(self):
+        super().__init__()
+        super().feature1()
 
-C4.feature1()
+        print('Hello i am c')
+
+
+c1 = C()
 
 
 
