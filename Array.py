@@ -12,36 +12,42 @@ class Employee:
     def apply_raise(self):
         self.sal = int(self.sal*Employee.raise_amount)
         return self.sal
-print(Employee.num_of_emps)
+    @classmethod
+    def set_raise_amount(cls,amount):
+        cls.raise_amount = amount
+        return cls.raise_amount
+
+    @classmethod
+    def from_string(cls,emp_str):
+        first, last, sal = emp_str.split('-')
+        return cls(first, last, sal)
 emp_1 = Employee('Hamid','Syed',2500)
 emp_2 = Employee('Khalid','nusrat',2500)
-#Employee.raise_amount = 1.06
+print('*************using set method for classs **************')
 
-emp_1.raise_amount =1.8
-print(emp_1.fullname())
-print('******************')
-print(Employee.fullname(emp_1))
-print('******************')
-print(emp_2.fullname())
-print('*******************')
-print(emp_1.sal)
-print(emp_1.apply_raise())
-print('to check ')
+print(emp_1.set_raise_amount(1.08))
+Employee.set_raise_amount(1.05)
 print(Employee.raise_amount)
-print('*******************')
-print(Employee.raise_amount)
-print(emp_1.raise_amount)
-print(emp_2.raise_amount)
-print('********Namespace of instance *************')
-print(emp_1.__dict__)
-print(emp_2.__dict__)
-print('*********************')
-print(Employee.__dict__)
-print(emp_2.raise_amount)
-print(emp_1.raise_amount)
-print(Employee.raise_amount)
-print('**********************')
-print(Employee.num_of_emps)
+
+print('*******************************************************')
+emp_str_1 = 'kashmir-Khan-4000'
+emp_str_2 = 'Khanabad-ras-2000'
+emp_str_3 = 'Hayat-gulab-1000'
+#first,last,sal   =emp_str_1.split('-')
+#first1,last1,sal1=emp_str_2.split('-')
+#first2,last2,sal2=emp_str_3.split('-')
+
+
+
+#new_emp_1 =Employee.fro(first,last,sal)
+#new_emp_2=Employee(first1,last1,sal1)
+#new_emp_3=Employee(first2,last2,sal2)
+new_emp_1 =Employee.from_string(emp_str_1)
+new_emp_2 =Employee.from_string(emp_str_2)
+new_emp_3 =Employee.from_string(emp_str_3)
+
+print(new_emp_1.email)
+
 """
 print(emp_1.email)
 print(emp_2.email)
