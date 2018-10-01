@@ -21,6 +21,16 @@ class Employee:
     def from_string(cls,emp_str):
         first, last, sal = emp_str.split('-')
         return cls(first, last, sal)
+    @staticmethod
+    def is_workday(day):
+        if day.weekday() == 5 or day.weekday() == 6:
+            return False
+        else:
+            return True
+import datetime
+my_date = datetime.date(2018,9,30)
+print(Employee.is_workday(my_date))
+
 emp_1 = Employee('Hamid','Syed',2500)
 emp_2 = Employee('Khalid','nusrat',2500)
 print('*************using set method for classs **************')
